@@ -1,6 +1,6 @@
 
 import { useEffect, useRef, useState } from "react";
-import mapboxgl, { GeoJSONSourceRaw } from "mapbox-gl";
+import mapboxgl, { GeoJSONSource } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Input } from "@/components/ui/input";
@@ -55,7 +55,7 @@ const LocationHeatmap = ({ isLoading }: LocationHeatmapProps) => {
         ]
       };
 
-      const source: GeoJSONSourceRaw = {
+      const source: GeoJSONSource = {
         type: "geojson",
         data: heatmapData
       };
